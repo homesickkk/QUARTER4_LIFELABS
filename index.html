@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LL IPBA GROUP4</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f6d5f7, #ffaaa7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
+    .page {
+      background: white;
+      width: 90%;
+      max-width: 1000px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .page.active { opacity: 1; }
+    h1 { font-size: 1.6rem; margin: 0.3em 0; }
+    p { font-size: 1rem; color: #555; margin: 5px 0; }
+    .button {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px 12px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      background: transparent;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button:hover { background: #ffaaa7; color: white; }
+    .hidden { display: none; }
+    #extra-info, #extra-info2 {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    #extra-info.expanded, #extra-info2.expanded {
+      max-height: 1500px;
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      display: block;
+      border-radius: 10px;
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-container img {
+      width: 100%;
+      max-width: 380px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      .page { width: 95%; padding: 12px; }
+      h1 { font-size: 1.4rem; }
+      p { font-size: 0.9rem; }
+      .button { width: 100%; padding: 10px; font-size: 1rem; }
+      .image-container img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page active" id="page1">
+    <h1>Welcome to Group 4!</h1>
+    <p>Take a look at all of our outputs for each quarter!<br> - - - - <br>We consist of 6 members: Shamiya, Anjeal, Faith, Kimberly, Mikaela, and Prince</p>
+    <p style="font-size: 0.8rem; color: #aaa;"><strong>Note: Double click the Quarter 1-4 buttons to see our Outputs!</strong></p>
+    <a href="#" class="button" ondblclick="showPage('page2')">Quarter 1</a>
+    <a href="#" class="button" ondblclick="showPage('page3')">Quarter 2</a>
+    <a href="#" class="button" ondblclick="showPage('page4')">Quarter 3</a>
+    <a href="#" class="button" ondblclick="showPage('page5')">Quarter 4</a>
+  </div>
+
+  <div class="page hidden" id="page2">
+    <h1>Quarter 1 - STORYBOARD</h1>
+    <div class="image-container">
+      <img src="https://i.ibb.co/GfW8JJjx/6fde7721-25df-4a39-a9dc-212dfb422e49.jpg" alt="Quarter 1 Image">
+    </div>
+    <a href="#" class="button" onclick="showPage('page1')">Return to Introduction</a>
+  </div>
+
+  <div class="page hidden" id="page3">
+    <h1>Quarter 2</h1>
+    <p>MIND MAPPING -- Gender Issues on Women in Metal Ages</p>
+    <div class="image-container">
+      <img src="https://i.ibb.co/KptXTP86/31abe67d-419d-457e-8bbb-57ed4aaccca0.jpg" alt="Placeholder Image Quarter 2" style="width: 600px; height: auto;">
+    </div>
+    <p>Protection of domestic violence enables women to access education, work, and freedom without having any fear that is to help break the need on abusers and guarantees respect from societal levels for women's rights, so it facilitates wider opportunities. Protection of domestic violence grants women to having the right to safety, education, dignity, freedom and equality without having any fear to help break the need on abusers and guarantees respect from societal levels for women's rights and facilitates wider opportunities for women, protecting women from domestic violence is not only about individual safety but also about creating a fairer, healthier, and more prosperous society, it is extremely crucial to protect our felow women from domestic violence to avoid any further trauma as they are vital for our living, such violence refrain certain women to live free from fear and without this protection many women will often feel trapped in abusive relationships, limiting them to do certain things.</p>
+    <p>World Bank. (2021). The World Bank annual report 2021: A year of resilience and recovery — <a href="https://openknowledge.worldbank.org/entities/publication/2da4520e-e100-5eed-bc19-a1fbbc9f6a1e">https://openknowledge.worldbank.org/entities/publication/2da4520e-e100-5eed-bc19-a1fbbc9f6a1e</a></p>
+    <p>Philippine Commission on Women. (2023) Violence against women. Philippine Commission on Women. — <a href="https://pcw.gov.ph/violence-against-women/">https://pcw.gov.ph/violence-against-women</a></p>
+    <p>UN Women. (n.d.). Ending violence against women. 2024 — <a href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women">https://www.unwomen.org/en/what-we-do/ending-violence-against-women</a></p>
+    <a href="#" class="button" onclick="showPage('page1')">Return to Introduction</a>
+  </div>
+
+  <div class="page hidden" id="page4">
+    <h1>OUR PROTOTYPE</h1>
+    <p>THEME -- Stop Domestic Violence in Women!</p>
+    <a href="https://ibb.co/s9xCDcnT"><img src="https://i.ibb.co/s9xCDcnT/received-1405238454173361.png" alt="Prototype Image"></a>
+    <p style="font-size: 0.8rem; margin-top: 5px;">Click the Image for Better View</p>
+    <button class="button" onclick="toggleExtraInfo()">More Information Here!</button>
+    <button class="button" onclick="toggleExtraInfo2()">Survey Results! ⬎</button>
+    <div id="extra-info">
+      <p>The poster presents a powerful scene of a massive protest, filled with faceless women standing together against domestic violence. These women come from different professions—nurses, teachers, firefighters, and more—highlighting that domestic violence affects women from all backgrounds.
+<br><br>
+Each protester holds signs with bold messages: "No Violence," "Break the Silence," "No! Action for #VAWA," and "Stop! Domestic Violence Against Women." Among them, the words "STOP" in "Stop! Domestic Violence" and "NO!" in "No! Action for #VAWA" stand out in striking red, drawing immediate attention to the urgency of the message.
+<br><br>
+At the top of the poster, a pair of teary eyes symbolize the pain and suffering of victims, reminding viewers of the emotional and physical toll of domestic violence. The background features a crowd of demonstrators raising their fists and holding placards with statements like "Protect Women," "No Means No," and "Violence Doesn't Equal Strength," reinforcing the collective demand for justice, respect, and protection for women.
+<br><br>
+The use of black and white with selective red elements enhances the seriousness of the issue while emphasizing key points. The faceless figures convey a universal message: this fight is not just for individuals but for all women who have suffered in silence. The poster as a whole calls for immediate action, unity, and awareness in the ongoing struggle to end domestic violence.</p>
+    </div>
+    <div id="extra-info2">
+      <div class="image-container">
+        <img src="https://i.ibb.co/TxDV5f2X/image.png" alt="Survey Result 1">
+        <img src="https://i.ibb.co/S4hjvmXm/image.png" alt="Survey Result 2">
+        <p style="font-size: 0.9rem;"><strong>SUGGESTIONS we got from the Survey:<br>
+<br>● I think for me, just add a few more details that is related to your topic so that other viewers would get another idea other than just violence.
+<br>● Probably Less Blood
+<br>● Overall, the drawing is well done but I feel like it lacks design and incorporation of some elements. It needs a background and a better way to put the text so the message looks more powerful.
+<br>● Requires a bit more information regarsing your topic since it only describes the problem and not how to help in anyway or what the problem is.
+<br>● Be a bit more informative, visually too.</strong></p>
+      </div>
+    </div>
+    <a href="#" class="button" onclick="showPage('page1')">Return to Introduction</a>
+  </div>
+
+  <div class="page hidden" id="page5">
+    <h1>Quarter 4</h1>
+      <p> <b>TOPIC:</b>Impacts of typhoons and Solutions to mitigate their impacts.</p>
+    <p>WORKSHEETS</p>
+    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 15px;">
+      <a href="#" class="button" onclick="showPage('page6')">Lifelabs</a>
+      <a href="#" class="button" onclick="showPage('page7')">Science</a>
+    </div>
+    <a href="#" class="button" onclick="showPage('page1')">Return to Introduction</a>
+  </div>
+
+  <div class="page hidden" id="page6">
+    <h1>Lifelabs</h1>
+    <p><b>I.</b> Gathering Information</p>
+      <p><b>II.</b> Migitating the Impacts of Typhoons</p>
+      <h2>--------</h2>
+      <h2>I. Gathering Information</h2>
+      <h4>A.  What is the basic information of the typhoon (This includes the wind speed, the amount of precipitation it brought, when and where it occurred, etc.)
+</h4>
+      <p>Typhoon Rai is a category-5 typhoon, it hit the Philippines on December 16,  2021. Typhoon Rai came to Siargao Island in the province of Surigao del Norte  around 1:30 PM and also hit Dinagat island around 3:10 PM. The wind speed of typhoon Rai is 120 to 280 km/h (75 to 175 mph). The total fatalities are 410 while 80 people are missing. It caused a finalized damage of ₱47.6 billion (US$951 million), including ₱29.8 billion (US$596 million) of infrastructural damage.
+
+</p>
+      <h4>B. What is the basic information of the region that has been greatly affected by the typhoon (This includes the geographical location, economic status, population, etc.)?
+</h4>
+      <p style="text-align: left;"><br>Typhoon Rai, locally known as Odette, significantly impacted the Philippines, particularly the Visayas and Mindanao regions. These areas are characterized by a tropical climate, a mix of urban and rural economies, and a population of millions, many of whom rely on agriculture and fishing for their livelihoods.
+            <br>- Geographical Location ( Regions affected )
+            <br>• Siargao ( Surigao Del Norte ),
+            <br>• Dinagat Islands,
+            <br>• Southern Leyte,
+            <br>•Etc. <br>
+            <br>- Economic Status (Impact on Livelihoods)
+            <br>- Approximately 462,000 hectares of agricultural land affected
+            <br>- Nearly 2.2 million workers directly impacted, with high percentages in most affected Regions 
+            <br>• Western Visayas : 21%
+            <br>• Eastern Visayas : 19.3%
+            <br>• Central Visayas : 18.8% <br>
+            <br>- Affected Population :
+            <br>• An estimated 9.9 million people severely affected, which 2.4 million people are in need of assistance.
+            <br>•Vulnerable groups include children, woken, elderly, and persons with disabilities </p>
+
+      <h4>C. How was the community affected by the typhoon?</h4>
+      <p>Super Typhoon Rai, also known as Bagyong Odette started its first landfall on December 16, 2021, rain was heavily pouring, strong winds, and floods in the Visayas and Mindanao islands. Super Typhoon Rai made 9 landfalls in seven different provinces and communities in the provinces of Agusan del Norte, Dinagat Islands, Surigao del Norte, Surigao del Sur, Leyte and Southern Leyte had to face the impact of the Typhoon. It caused significant damage to health facilities, schools, and essential services and also heightened the risk of communicable disease outbreaks. The typhoon demolished lives and devastated farming and fishing communities which were providing a major source of income and livelihoods. It caused massive electricity and telecommunications outages that continued to affect many lives. Rai exited the Philippines on 18 December as the strongest storm to hit Mindanao in 10 years and the 3rd ever strongest recorded storm in the Northern Hemisphere leaving an estimate of 13 million people affected by Typhoon Rai.
+</p>
+      <h4>D. How did the community prepare for it? How did they recover?</h4>
+      <p>Typhoon Rai (Bagyong Odette) was one of the strongest typhoons to hit the Philippines in 2021, and communities prepared through early warnings, pre-emptive evacuations, and government assistance. The Philippines Atmospheric Geophysical and Astronomical Services Administration (PAGASA) issued advisories, while local governments set up evacuation centers and stockpiled relief goods. Despite these efforts, Odette caused widespread devastation, displacing thousands and damaging homes, roads, and power lines. Recovery efforts included relief operations led by the government, NGOs, and private sectors, providing food, clean water, and shelter. International aid also played a big role, with countries and organization donating financial assistance and resources for rebuilding. Communities demonstrated resilience by organizing mutual aid efforts, fundraising, and rebuilding their homes together.</p>
+<h4>E. How vulnerable are they to typhoons?</h4>
+      <p>They are highly vulnerable to typhoons because of their geographical position in the western pacific ocean, the rising sea levels and warm ocean temperatures with powerful winds excessing from 250 km/h (156 mph) or beyond make the typhoons even more unpredictable. Resulting in vulnerability and many loss of lives, crops, and overall environmental damage to the regions that were hit.</p>
+      <h4>F. Were there any damages? How severe were they?</h4>
+<p>The damages were quite severe. It caused a widespread flood that in many cases destroyed homes and businesses in coastal areas. The farmlands were destroyed by the strong winds and the plants were also destroyed because of the powerful rain. It made the trees uprooted leading through a massive release of carbon dioxide and loss of habitat that really affected the animals.</p>
+      <h4>G. Was the typhoon accompanied by secondary disasters? How did they affect the community?</h4>
+      <p>Typhoon Rai (Bagyong Odette) not only brought devastating winds and rainfall but also triggered secondary disasters such as flooding and landslides. These events exacerbated the damage to infrastructure, homes, and livelihoods. The destruction of agricultural lands and fishing equipment severely impacted local economies, leaving many communities without their primary sources of income. Recovery efforts have been challenging, with millions requiring humanities assistance, including shelter, clean water, and healthcare . The compounded effects of these secondary disasters underscore the vulnerability of affected regions and the critical need for comprehensive disaster preparedness and response strategies.</p>
+      <h4>H. Were there any positive impacts of the typhoon in the region? What are those?</h4>
+      <p>You may all know the level 5 super typhoon that struck the Philippines during December 16, 2021, known as the super typhoon rai or bagyong odette. This typhoon caused thousands of families’ houses, jobs, and lives to be destroyed. Normally, we would think that this super typhoon only caused negative effects and impacts on the lives of the Filipinos, particularly the ones of Visayas and Mindanao. But did you know that this, and other typhoons also caused some good impacts?<br><br> Surely, this typhoon had caused so many different negative impacts on so many people's lives. But yes! It also did cause positive impacts. In terms of ecological impacts, small or weak typhoons can take out and replace better nutrients on forests, and other areas with plants, crops and others through translocation or the process of delivering nutrients to plants. This caused better trees in our environment making a better habitat for us. Next, in terms of non-affected people, our country became united. Other non-affected regions showed empath, creating a donation file for the people 	stranded or affected to use on fixing houses, buildings, and other structures that was destroyed during the typhoon. A lot of people donated, and helped them after the disaster. Lastly, in terms of the affected people, this typhoon made them stronger. They became much more prepared for the other natural disasters or typhoons that may occur in their area. 
+</p>
+      
+      <h2>II. Mitigating the Impacts of Typhoons</h2>
+      <p>A. Brainstorming Tool 1 ┈ <b>Mind Mapping</b></p>
+    <img src="https://i.ibb.co/WvNdySDm/received-1348053893111788.jpg" alt="mindmap1" style="max-width: 100%;">
+    <p>B. Brainstorming Tool 2 ┈ <b>Fishbone Diagram</b></p>
+<img src="https://i.ibb.co/8LcmTG5s/received-652462900746138.jpg" alt="fishbonediagram1" style="max-width: 100%;">
+    <p>C. Brainstorming Tool 3 ┈ <b>5 Whys</b></p>
+<img src="https://i.ibb.co/27FZWWvR/received-2560895640757726.jpg" alt="5whys1" style="max-width: 100%;">
+    <p>D. Brainstorming Tool 4 ┈ <b>5 Whys</b></p>
+<img src="https://i.ibb.co/BVD7Fby1/received-2184235471992647.jpg" alt="5whys2" style="max-width: 100%;">
+    <h3>E. Proposed <b>Solution</b> to Mitigate the Impact of Typhoons</h3>
+    <p>╰┈➤ Building disaster-resilient communities <b>:</b></p>
+ <img src="https://i.ibb.co/WvNdySDm/received-1348053893111788.jpg" alt="mindmap1" style="max-width: 100%;">     
+    <a href="#" class="button" onclick="showPage('page5')">Return to Quarter 4</a>
+  </div>
+
+  <div class="page hidden" id="page7">
+      
+    <h1>Science</h1>
+    <p>Science Worksheet  --- <b>Number 1</b></p>
+      <h2>How does the typhoon develop over time?</h2>
+      <p>On December 16, 2021, a huge typhoon suddenly struck at different places inside and outside the Philippines. Thousands of buildings, houses, trees, and lives were destroyed. This typhoon was the 15th storm to hit the Philippines and was the strongest one in the year 2021. This typhoon is called the typhoon rai or what they call bagyong odette in local areas. This super typhoon originated from a disturbance in the ocean near the equator during December 10 (6 days before it became a super typhoon), creating a low-pressure area near the part where another one was scattered on the previous day. After this, things got worse for it slowly became a tropical depression on December 12. Then, it continuously created a typhoon, and was slowly turned into a super typhoon.</p>
+    <a href="#" class="button" onclick="showPage('page5')">Return to Quarter 4</a>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.add("hidden");
+        page.classList.remove("active");
+      });
+      const selectedPage = document.getElementById(pageId);
+      selectedPage.classList.remove("hidden");
+      selectedPage.classList.add("active");
+    }
+
+    function toggleExtraInfo() {
+      const info = document.getElementById("extra-info");
+      info.classList.toggle("expanded");
+    }
+
+    function toggleExtraInfo2() {
+      const info2 = document.getElementById("extra-info2");
+      info2.classList.toggle("expanded");
+    }
+  </script>
+</body>
+</html>
